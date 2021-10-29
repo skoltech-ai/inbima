@@ -3,3 +3,4 @@
 *.md linguist-detectable=false
 *.py linguist-detectable=true
 *.txt linguist-detectable=false
+*.bib linguist-detectable=false
