@@ -1,0 +1,8 @@
+csv
+docx
+openpyxl
+pybtex
+python-docx
+python-Levenshtein
+requests
+xlsxwriter
