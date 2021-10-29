@@ -1,0 +1,1264 @@
+﻿
+@article{ WOS:000663616000007,
+Author = {Goncharov, Mikhail and Pisov, Maxim and Shevtsov, Alexey and Shirokikh,
+   Boris and Kurmukov, Anvar and Blokhin, Ivan and Chernina, Valeria and
+   Solovev, Alexander and Gombolevskiy, Victor and Morozov, Sergey and
+   Belyaev, Mikhail},
+Title = {{CT-Based COVID-19 triage: Deep multitask learning improves joint
+   identification and severity quantification}},
+Journal = {{MEDICAL IMAGE ANALYSIS}},
+Year = {{2021}},
+Volume = {{71}},
+Month = {{JUL}},
+Abstract = {{The current COVID-19 pandemic overloads healthcare systems, including
+   radiology departments. Though several deep learning approaches were
+   developed to assist in CT analysis, nobody considered study triage
+   directly as a computer science problem. We describe two basic setups:
+   Identification of COVID-19 to prioritize studies of potentially infected
+   patients to isolate them as early as possible; Severity quantification
+   to highlight patients with severe COVID-19, thus direct them to a
+   hospital or provide emergency medical care. We formalize these tasks as
+   binary classification and estimation of affected lung percentage. Though
+   similar problems were well-studied separately, we show that existing
+   methods could provide reasonable quality only for one of these setups.
+   We employ a multitask approach to consolidate both triage approaches and
+   propose a convolutional neural network to leverage all available labels
+   within a single model. In contrast with the related multitask
+   approaches, we show the benefit from applying the classification layers
+   to the most spatially detailed feature map at the upper part of U-Net
+   instead of the less detailed latent representation at the bottom. We
+   train our model on approximately 1500 publicly available CT studies and
+   test it on the holdout dataset that consists of 123 chest CT studies of
+   patients drawn from the same healthcare system, specifically 32 COVID-19
+   and 30 bacterial pneumonia cases, 30 cases with cancerous nodules, and
+   31 healthy controls. The proposed multitask model outperforms the other
+   approaches and achieves ROC AUC scores of 0 . 87 +/- 0 . 01 vs.
+   bacterial pneumonia, 0 . 93 +/- 0 . 01 vs. cancerous nodules, and 0 . 97
+   +/- 0 . 01 vs. healthy controls in Identification of COVID-19, and
+   achieves 0 . 97 +/- 0 . 01 Spearman Correlation in Severity
+   quantification . We have released our code and shared the annotated
+   lesions masks for 32 CT images of patients with COVID-19 from the test
+   dataset.\& nbsp; (c) 2021 The Authors. Published by Elsevier B.V. This
+   is an open access article under the CC BY license (
+   http://creativecommons.org/licenses/by/4.0/ )}},
+Publisher = {{ELSEVIER}},
+Address = {{RADARWEG 29, 1043 NX AMSTERDAM, NETHERLANDS}},
+Type = {{Article}},
+Language = {{English}},
+Affiliation = {{Belyaev, M (Corresponding Author), Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Goncharov, Mikhail; Pisov, Maxim; Shirokikh, Boris; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Blokhin, Ivan; Chernina, Valeria; Gombolevskiy, Victor; Morozov, Sergey, Moscow Hlth Care Dept, Res \& Pract Clin Ctr Diagnost \& Telemed Technol, Moscow, Russia.
+   Solovev, Alexander, Sklifosovsky Clin \& Res Inst Emergency Med, Moscow, Russia.}},
+DOI = {{10.1016/j.media.2021.102054}},
+Article-Number = {{102054}},
+ISSN = {{1361-8415}},
+EISSN = {{1361-8423}},
+Keywords = {{COVID-19; Triage; Convolutional neural network; Chest computed
+   tomography}},
+Keywords-Plus = {{ARTIFICIAL-INTELLIGENCE}},
+Research-Areas = {{Computer Science; Engineering; Radiology, Nuclear Medicine \& Medical
+   Imaging}},
+Web-of-Science-Categories  = {{Computer Science, Artificial Intelligence; Computer Science,
+   Interdisciplinary Applications; Engineering, Biomedical; Radiology,
+   Nuclear Medicine \& Medical Imaging}},
+Author-Email = {{m.belyaev@skoltech.ru}},
+ResearcherID-Numbers = {{Solovev, Alexander/ABB-5911-2021
+   Belyaev, Mikhail/M-4900-2016
+   Morozov, Sergey/T-9163-2017
+   }},
+ORCID-Numbers = {{Solovev, Alexander/0000-0003-4485-2638
+   Belyaev, Mikhail/0000-0001-9906-6453
+   Blokhin, Ivan/0000-0002-2681-9378
+   Chernina, Valeria/0000-0002-0302-293X
+   Morozov, Sergey/0000-0001-6545-6170
+   Shirokikh, Boris/0000-0002-2901-5789}},
+Number-of-Cited-References = {{69}},
+Times-Cited = {{3}},
+Usage-Count-Last-180-days = {{6}},
+Usage-Count-Since-2013 = {{6}},
+Journal-ISO = {{Med. Image Anal.}},
+Doc-Delivery-Number = {{SV1WT}},
+Unique-ID = {{WOS:000663616000007}},
+OA = {{hybrid, Green Submitted, Green Published}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000622639900001,
+Author = {Shirokikh, Boris and Shevtsov, Alexey and Dalechina, Alexandra and
+   Krivov, Egor and Kostjuchenko, Valery and Golanov, Andrey and
+   Gombolevskiy, Victor and Morozov, Sergey and Belyaev, Mikhail},
+Title = {{Accelerating 3D Medical Image Segmentation by Adaptive Small-Scale
+   Target Localization}},
+Journal = {{JOURNAL OF IMAGING}},
+Year = {{2021}},
+Volume = {{7}},
+Number = {{2}},
+Month = {{FEB}},
+Abstract = {{The prevailing approach for three-dimensional (3D) medical image
+   segmentation is to use convolutional networks. Recently, deep learning
+   methods have achieved human-level performance in several important
+   applied problems, such as volumetry for lung-cancer diagnosis or
+   delineation for radiation therapy planning. However, state-of-the-art
+   architectures, such as U-Net and DeepMedic, are computationally heavy
+   and require workstations accelerated with graphics processing units for
+   fast inference. However, scarce research has been conducted concerning
+   enabling fast central processing unit computations for such networks.
+   Our paper fills this gap. We propose a new segmentation method with a
+   human-like technique to segment a 3D study. First, we analyze the image
+   at a small scale to identify areas of interest and then process only
+   relevant feature-map patches. Our method not only reduces the inference
+   time from 10 min to 15 s but also preserves state-of-the-art
+   segmentation quality, as we illustrate in the set of experiments with
+   two large datasets.}},
+Publisher = {{MDPI}},
+Address = {{ST ALBAN-ANLAGE 66, CH-4052 BASEL, SWITZERLAND}},
+Type = {{Article}},
+Language = {{English}},
+Affiliation = {{Shirokikh, B (Corresponding Author), Skolkovo Inst Sci \& Technol, Ctr Neurobiol \& Brain Restorat, Moscow 121205, Russia.
+   Shirokikh, Boris; Shevtsov, Alexey; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Ctr Neurobiol \& Brain Restorat, Moscow 121205, Russia.
+   Shevtsov, Alexey; Krivov, Egor, Kharkevich Inst Informat Transmiss Problems, Sect Data Anal Neurosci, Moscow 127051, Russia.
+   Shevtsov, Alexey; Krivov, Egor, Moscow Inst Phys \& Technol, Dept Radio Engn \& Cybernet, Moscow 141701, Russia.
+   Dalechina, Alexandra; Kostjuchenko, Valery, Moscow Gamma Knife Ctr, Moscow 125047, Russia.
+   Golanov, Andrey, Burdenko Neurosurg Inst, Dept Radiosurg \& Radiat, Moscow 125047, Russia.
+   Gombolevskiy, Victor; Morozov, Sergey, Dept Hlth Care Moscow, Med Res Dept, Res \& Pract Clin Ctr Diagnost \& Telemed Technol, Moscow 127051, Russia.}},
+DOI = {{10.3390/jimaging7020035}},
+Article-Number = {{35}},
+EISSN = {{2313-433X}},
+Keywords = {{deep learning; medical image segmentation; computed tomography (CT);
+   magnetic resonance imaging (MRI)}},
+Keywords-Plus = {{PULMONARY NODULES; ALGORITHMS; CT}},
+Research-Areas = {{Imaging Science \& Photographic Technology}},
+Web-of-Science-Categories  = {{Imaging Science \& Photographic Technology}},
+Author-Email = {{Boris.Shirokikh@skoltech.ru
+   Alexey.Shevtsov@skoltech.ru
+   adalechina@nsi.ru
+   Egor.Krivov@frtk.ru
+   VKostjuchenko@nsi.ru
+   Golanov@nsi.ru
+   gombolevskiy@npcmr.ru
+   morozov@npcmr.ru
+   m.belyaev@skoltech.ru}},
+ResearcherID-Numbers = {{Belyaev, Mikhail/M-4900-2016
+   Morozov, Sergey/T-9163-2017
+   Dalechina, Alexandra/A-9431-2015}},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453
+   Morozov, Sergey/0000-0001-6545-6170
+   Dalechina, Alexandra/0000-0003-0782-0821}},
+Funding-Acknowledgement = {{Russian Science FoundationRussian Science Foundation (RSF)
+   {[}20-71-10134]}},
+Funding-Text = {{This research was supported by the Russian Science Foundation grant
+   20-71-10134.}},
+Number-of-Cited-References = {{40}},
+Times-Cited = {{1}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{0}},
+Journal-ISO = {{J. Imaging}},
+Doc-Delivery-Number = {{QN7MY}},
+Unique-ID = {{WOS:000622639900001}},
+OA = {{Green Published, gold}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000510805200216,
+Author = {Karkashadze, George and Namazova-Baranova, Leyla and Belyaev, Mikhail
+   and Anikin, Anatoly and Gundobina, Olga and Vashakmadze, Nato and
+   Karkashadze, Magda and Kapilushniy, Dmitry and Gogberashvili, Tina and
+   Movsisyan, Goar and Ermolina, Julia and Konstsantinidi, Tatiana and
+   Solovieva, Anastasia and Firumyants, Alexey and Khrameeva, Ekaterina and
+   Gutman, Boris and Zelman, Vladimir and Thompson, Paul and Baranov,
+   Alexander},
+Title = {{Abnormalities in the cerebral cortex in Gaucher disease type 1: Findings
+   from the ENIGMA storage disease working group}},
+Journal = {{MOLECULAR GENETICS AND METABOLISM}},
+Year = {{2020}},
+Volume = {{129}},
+Number = {{2}},
+Meeting = {{197}},
+Pages = {{S84}},
+Month = {{FEB}},
+Note = {{16th Annual Research Meeting of the WORLDSymposium(TM), Orlando, FL, FEB
+   10-14, 2020}},
+Organization = {{WORLDSymposium}},
+Publisher = {{ACADEMIC PRESS INC ELSEVIER SCIENCE}},
+Address = {{525 B ST, STE 1900, SAN DIEGO, CA 92101-4495 USA}},
+Type = {{Meeting Abstract}},
+Language = {{English}},
+Affiliation = {{Karkashadze, George; Namazova-Baranova, Leyla; Vashakmadze, Nato; Gogberashvili, Tina; Konstsantinidi, Tatiana; Baranov, Alexander, Sci Res Inst Pediat \& Child Hlth CCH RAoS, Moscow, Russia.
+   Belyaev, Mikhail; Khrameeva, Ekaterina, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Anikin, Anatoly; Gundobina, Olga; Karkashadze, Magda; Kapilushniy, Dmitry; Movsisyan, Goar; Ermolina, Julia, Natl Med Res Ctr Childrens Hlth MoH, Moscow, Russia.
+   Solovieva, Anastasia; Firumyants, Alexey, Working Grp ENIGMA Storage Dis, Moscow, Russia.
+   Gutman, Boris; Zelman, Vladimir; Thompson, Paul, Working Grp ENIGMA Storage Dis, Los Angeles, CA USA.}},
+DOI = {{10.1016/j.ymgme.2019.11.206}},
+ISSN = {{1096-7192}},
+EISSN = {{1096-7206}},
+Research-Areas = {{Endocrinology \& Metabolism; Genetics \& Heredity; Research \&
+   Experimental Medicine}},
+Web-of-Science-Categories  = {{Endocrinology \& Metabolism; Genetics \& Heredity; Medicine, Research \&
+   Experimental}},
+ResearcherID-Numbers = {{Belyaev, Mikhail/M-4900-2016
+   Vashakmadze, Nato/AAY-9246-2020
+   Namazova-Baranova, Leyla/C-9485-2019
+   Alexander, Baranov/O-4882-2019}},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453
+   Namazova-Baranova, Leyla/0000-0002-2209-7531
+   Alexander, Baranov/0000-0003-3987-8112}},
+Number-of-Cited-References = {{0}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{0}},
+Journal-ISO = {{Mol. Genet. Metab.}},
+Doc-Delivery-Number = {{KH7BP}},
+Unique-ID = {{WOS:000510805200216}},
+DA = {{2021-10-27}},
+}
+
+@inproceedings{ WOS:000626021400035,
+Author = {Pimkin, Artem and Samoylenko, Alexander and Antipina, Natalia and
+   Ovechkina, Anna and Golanov, Andrey and Dalechina, Alexandra and
+   Belyaev, Mikhail},
+Book-Group-Author = {{IEEE}},
+Title = {{Multidomain CT Metal Artifacts Reduction Using Partial Convolution Based
+   Inpainting}},
+Booktitle = {{2020 INTERNATIONAL JOINT CONFERENCE ON NEURAL NETWORKS (IJCNN)}},
+Series = {{IEEE International Joint Conference on Neural Networks (IJCNN)}},
+Year = {{2020}},
+Note = {{International Joint Conference on Neural Networks (IJCNN) held as part
+   of the IEEE World Congress on Computational Intelligence (IEEE WCCI),
+   ELECTR NETWORK, JUL 19-24, 2020}},
+Organization = {{IEEE; IEEE Computat Intelligence Soc; Int Neural Network Soc}},
+Abstract = {{Recent Metal Artifacts Reduction (MAR) methods for Computed Tomography
+   are often based on image-to-image convolutional neural networks for
+   adjustment of corrupted sinograms or images themselves. In this paper,
+   we are exploring the capabilities of a multidomain method, which
+   consists of both sinogram correction (projection domain step) and
+   restored image correction (image-domain step). We formulate the first
+   step problem directly as sinogram inpainting, which allows us to use
+   methods of this specific field, such as partial convolutions. Moreover,
+   we propose a synthetic data generation pipeline to avoid problems with
+   overfitting to metal shapes set and an artifacts formation technique.
+   The proposed method achieves state-of-the-art (-75\% MSE) improvement in
+   comparison with a classic benchmark - Li-MAR.}},
+Publisher = {{IEEE}},
+Address = {{345 E 47TH ST, NEW YORK, NY 10017 USA}},
+Type = {{Proceedings Paper}},
+Language = {{English}},
+Affiliation = {{Pimkin, A (Corresponding Author), Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Pimkin, Artem; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Samoylenko, Alexander, Moscow Inst Phys \& Technol, Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Antipina, Natalia; Golanov, Andrey, NN Burdenko Natl Med Res Ctr Neurosurg, Moscow, Russia.
+   Ovechkina, Anna, Lomonosov Moscow State Univ, Moscow, Russia.
+   Dalechina, Alexandra, Moscow Gamma Knife Ctr, Moscow, Russia.}},
+ISSN = {{2161-4393}},
+ISBN = {{978-1-7281-6926-2}},
+Keywords = {{Convolutional Networks; Computed Tomography (CT) images; Metal Artifacts
+   Reduction; Sinogram Inpainting; Partial Convolutions}},
+Research-Areas = {{Computer Science}},
+Web-of-Science-Categories  = {{Computer Science, Artificial Intelligence; Computer Science, Hardware \&
+   Architecture}},
+Author-Email = {{a.pimkin@skoltech.ru
+   samojlenko.ai@phystech.edu
+   nantipina@nsi.ru
+   av.ovechkina@physics.msu.ru
+   golanov@nsi.ru
+   adalechina@nsi.ru
+   m.belyaev@skoltech.ru}},
+ResearcherID-Numbers = {{Belyaev, Mikhail/M-4900-2016}},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453}},
+Funding-Acknowledgement = {{Russian Foundation for Basic ResearchRussian Foundation for Basic
+   Research (RFBR) {[}18-29-26030]}},
+Funding-Text = {{The results have been obtained under the support of the Russian
+   Foundation for Basic Research grant 18-29-26030. The authors thank
+   Skoltech Zhores team for the provided computational resources.}},
+Number-of-Cited-References = {{19}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{0}},
+Doc-Delivery-Number = {{BQ9MM}},
+Unique-ID = {{WOS:000626021400035}},
+DA = {{2021-10-27}},
+}
+
+@inproceedings{ WOS:000582305200004,
+Author = {Pisov, Maxim and Goncharov, Mikhail and Kurochkina, Nadezhda and
+   Morozov, Sergey and Gombolevskiy, Victor and Chernina, Valeria and
+   Vladzymyrskyy, Anton and Zamyatina, Ksenia and Chesnokova, Anna and
+   Pronin, Igor and Shifrin, Michael and Belyaev, Mikhail},
+Editor = {{Suzuki, K and Reyes, M and SyedaMahmood, T}},
+Title = {{Incorporating Task-Specific Structural Knowledge into CNNs for Brain
+   Midline Shift Detection}},
+Booktitle = {{INTERPRETABILITY OF MACHINE INTELLIGENCE IN MEDICAL IMAGE COMPUTING AND
+   MULTIMODAL LEARNING FOR CLINICAL DECISION SUPPORT}},
+Series = {{Lecture Notes in Computer Science}},
+Year = {{2020}},
+Volume = {{11797}},
+Pages = {{30-38}},
+Note = {{2nd International Workshop on Interpretability of Machine Intelligence
+   in Medical Image Computing (IMIMIC) / 9th International Workshop on
+   Multimodal Learning for Clinical Decision Support (ML-CDS), Shenzhen,
+   PEOPLES R CHINA, OCT 17, 2019}},
+Abstract = {{Midline shift (MLS) is a well-established factor used for outcome
+   prediction in traumatic brain injury, stroke and brain tumors. The
+   importance of automatic estimation of MLS was recently highlighted by
+   ACR Data Science Institute. In this paper we introduce a novel deep
+   learning based approach for the problem of MLS detection, which exploits
+   task-specific structural knowledge. We evaluate our method on a large
+   dataset containing heterogeneous images with significant MLS and show
+   that its mean error approaches the inter-expert variability. Finally, we
+   show the robustness of our approach by validating it on an external
+   dataset, acquired during routine clinical practice.}},
+Publisher = {{SPRINGER INTERNATIONAL PUBLISHING AG}},
+Address = {{GEWERBESTRASSE 11, CHAM, CH-6330, SWITZERLAND}},
+Type = {{Proceedings Paper}},
+Language = {{English}},
+Affiliation = {{Belyaev, M (Corresponding Author), Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Belyaev, M (Corresponding Author), Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Pisov, Maxim; Kurochkina, Nadezhda; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Pisov, Maxim; Goncharov, Mikhail; Belyaev, Mikhail, Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Goncharov, Mikhail, Moscow Inst Phys \& Technol, Moscow, Russia.
+   Morozov, Sergey; Gombolevskiy, Victor; Chernina, Valeria; Vladzymyrskyy, Anton; Zamyatina, Ksenia; Chesnokova, Anna, Ctr Diagnost \& Telemed, Moscow, Russia.
+   Pronin, Igor; Shifrin, Michael, Burdenko Neurosurg Inst, Moscow, Russia.}},
+DOI = {{10.1007/978-3-030-33850-3\_4}},
+ISSN = {{0302-9743}},
+EISSN = {{1611-3349}},
+ISBN = {{978-3-030-33850-3; 978-3-030-33849-7}},
+Keywords = {{Neural networks; Midline shift; Interpretability; Confidence}},
+Keywords-Plus = {{LEVEL}},
+Research-Areas = {{Computer Science; Medical Informatics; Radiology, Nuclear Medicine \&
+   Medical Imaging}},
+Web-of-Science-Categories  = {{Computer Science, Interdisciplinary Applications; Medical Informatics;
+   Radiology, Nuclear Medicine \& Medical Imaging}},
+Author-Email = {{m.belyaev@skoltech.ru}},
+ResearcherID-Numbers = {{Pisov, Maxim/AAN-7302-2020
+   Belyaev, Mikhail/M-4900-2016}},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453}},
+Funding-Acknowledgement = {{Russian Science FoundationRussian Science Foundation (RSF)
+   {[}17-11-01390]}},
+Funding-Text = {{The development of the interpretable algorithm (done by M. Pisov and M.
+   Goncharov) was supported by the Russian Science Foundation grant
+   17-11-01390.}},
+Number-of-Cited-References = {{16}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{0}},
+Doc-Delivery-Number = {{BQ2MC}},
+Unique-ID = {{WOS:000582305200004}},
+OA = {{Green Submitted}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000494433300007,
+Author = {Kuijf, Hugo J. and Biesbroek, J. Matthijs and de Bresser, Jeroen and
+   Heinen, Rutger and Andermatt, Simon and Bento, Mariana and Berseth, Matt
+   and Belyaev, Mikhail and Cardoso, M. Jorge and Casamitjana, Adria and
+   Collins, D. Louis and Dadar, Mahsa and Georgiou, Achilleas and
+   Ghafoorian, Mohsen and Jin, Dakai and Khademi, April and Knight, Jesse
+   and Li, Hongwei and Llado, Xavier and Luna, Miguel and Mahmood, Qaiser
+   and McKinley, Richard and Mehrtash, Alireza and Ourselin, Sebastien and
+   Park, Bo-Yong and Park, Hyunjin and Park, Sang Hyun and Pezold, Simon
+   and Puybareau, Elodie and Rittner, Leticia and Sudre, Carole H. and
+   Valverde, Sergi and Vilaplana, Veronica and Wiest, Roland and Xu,
+   Yongchao and Xu, Ziyue and Zeng, Guodong and Zhang, Jianguo and Zheng,
+   Guoyan and Chen, Christopher and van der Flier, Wiesje and Barkhof,
+   Frederik and Viergever, Max A. and Biessels, Geert Jan},
+Title = {{Standardized Assessment of Automatic Segmentation of White Matter
+   Hyperintensities and Results of the WMH Segmentation Challenge}},
+Journal = {{IEEE TRANSACTIONS ON MEDICAL IMAGING}},
+Year = {{2019}},
+Volume = {{38}},
+Number = {{11}},
+Pages = {{2556-2568}},
+Month = {{NOV}},
+Abstract = {{Quantification of cerebral white matter hyperintensities (WMH) of
+   presumed vascular origin is of key importance in many neurological
+   research studies. Currently, measurements are often still obtained from
+   manual segmentations on brain MR images, which is a laborious procedure.
+   The automatic WMH segmentation methods exist, but a standardized
+   comparison of the performance of such methods is lacking. We organized a
+   scientific challenge, in which developers could evaluate their methods
+   on a standardized multi-center/-scanner image dataset, giving an
+   objective comparison: the WMH Segmentation Challenge. Sixty T1 FLAIR
+   images from three MR scanners were released with the manual WMH
+   segmentations for training. A test set of 110 images from five MR
+   scanners was used for evaluation. The segmentation methods had to be
+   containerized and submitted to the challenge organizers. Five evaluation
+   metrics were used to rank the methods: 1) Dice similarity coefficient;
+   2) modified Hausdorff distance (95th percentile); 3) absolute
+   log-transformed volume difference; 4) sensitivity for detecting
+   individual lesions; and 5) F1-score for individual lesions. In addition,
+   the methods were ranked on their inter-scanner robustness; 20
+   participants submitted their methods for evaluation. This paper provides
+   a detailed analysis of the results. In brief, there is a cluster of four
+   methods that rank significantly better than the other methods, with one
+   clear winner. The inter-scanner robustness ranking shows that not all
+   the methods generalize to unseen scanners. The challenge remains open
+   for future submissions and provides a public platform for method
+   evaluation.}},
+Publisher = {{IEEE-INST ELECTRICAL ELECTRONICS ENGINEERS INC}},
+Address = {{445 HOES LANE, PISCATAWAY, NJ 08855-4141 USA}},
+Type = {{Article}},
+Language = {{English}},
+Affiliation = {{Kuijf, HJ (Corresponding Author), Univ Utrecht, UMC Utrecht, Image Sci Inst, Utrecht, Netherlands.
+   Kuijf, Hugo J.; Viergever, Max A., Univ Utrecht, UMC Utrecht, Image Sci Inst, Utrecht, Netherlands.
+   Biesbroek, J. Matthijs; Heinen, Rutger; Biessels, Geert Jan, Univ Utrecht, UMC Utrecht, Brain Ctr Rudolf Magnus, Utrecht, Netherlands.
+   de Bresser, Jeroen, Univ Utrecht, UMC Utrecht, Dept Radiol, Utrecht, Netherlands.
+   de Bresser, Jeroen, LUMC, Dept Radiol, Leiden, Netherlands.
+   Andermatt, Simon; Pezold, Simon, Univ Basel, Dept Biomed Engn, Allschwil, Switzerland.
+   Bento, Mariana, Univ Calgary, Hotchkiss Brain Inst, Dept Radiol, Calgary, AB, Canada.
+   Bento, Mariana, Univ Calgary, Hotchkiss Brain Inst, Dept Clin Neurosci, Calgary, AB, Canada.
+   Berseth, Matt, NLP Logix, Jacksonville, FL USA.
+   Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Ctr Neurobiol \& Brain Restorat, Moscow, Russia.
+   Cardoso, M. Jorge, Kings Coll London, Sch Biomed Engn \& Imaging Sci, London, England.
+   Cardoso, M. Jorge, UCL, Ctr Med Image Comp, London, England.
+   Casamitjana, Adria; Vilaplana, Veronica, Univ Politecn Cataluna, BarcelonaTech, Signal Theory \& Communicat Dept, Barcelona, Spain.
+   Collins, D. Louis; Dadar, Mahsa, McGill Univ, Montreal Neurol Inst, Montreal, PQ, Canada.
+   Georgiou, Achilleas, UCL, Computat Stat \& Machine Learning MSc Program, London, England.
+   Ghafoorian, Mohsen, TomTom, Amsterdam, Netherlands.
+   Jin, Dakai; Xu, Ziyue, NIH, Dept Radiol \& Imaging Sci, Bldg 10, Bethesda, MD 20892 USA.
+   Khademi, April, Ryerson Univ, Image Anal Med Lab, Toronto, ON, Canada.
+   Knight, Jesse, Univ Guelph, Guelph, ON, Canada.
+   Li, Hongwei, Sun Yat Sen Univ, Sch Data \& Comp Sci, Guangzhou, Guangdong, Peoples R China.
+   Li, Hongwei, Univ Dundee, Sch Sci \& Engn, Dundee, Scotland.
+   Li, Hongwei, Tech Univ Munich, Dept Comp Sci, Munich, Germany.
+   Llado, Xavier; Valverde, Sergi, Univ Girona, Res Inst Comp Vis \& Robot, Girona, Spain.
+   Luna, Miguel; Park, Sang Hyun, Daegu Gyeongbuk Inst Sci \& Technol, Dept Robot Engn, Daegu, South Korea.
+   Mahmood, Qaiser, Pakistan Inst Nucl Sci \& Technol, Islamabad, Pakistan.
+   McKinley, Richard; Wiest, Roland, Univ Bern, Inselspital, Inst Diagnost \& Intervent Neuroradiol, Support Ctr Adv Neuroimaging, Bern, Switzerland.
+   Mehrtash, Alireza, Univ British Columbia, Elect \& Comp Engn Dept, Vancouver, BC, Canada.
+   Mehrtash, Alireza, Harvard Med Sch, Brigham \& Womens Hosp, Dept Radiol, Boston, MA 02115 USA.
+   Ourselin, Sebastien, Kings Coll London, Sch Biomed Engn \& Imaging Sci, London, England.
+   Park, Bo-Yong, Sungkyunkwan Univ, Dept Elect Elect \& Comp Engn, Seoul, South Korea.
+   Park, Bo-Yong; Park, Hyunjin, IBS, Ctr Neurosci Imaging Res, Suwon, South Korea.
+   Park, Hyunjin, Sungkyunkwan Univ, Sch Elect \& Elect Engn, Suwon, South Korea.
+   Puybareau, Elodie; Xu, Yongchao, EPITA, Res \& Dev Lab LRDE, Le Kremlin Bicetre, France.
+   Rittner, Leticia, Univ Estadual Campinas, Sch Elect \& Comp Engn, Campinas, SP, Brazil.
+   Sudre, Carole H., Kings Coll London, Sch Biomed Engn \& Imaging Sci, London, England.
+   Sudre, Carole H., UCL, Inst Neurol, Ctr Med Image Comp, London, England.
+   Sudre, Carole H., UCL, Inst Neurol, Dementia Res Ctr, London, England.
+   Sudre, Carole H., Univ Paris Saclay, Telecom ParisTech, LTCI, St Aubin, France.
+   Sudre, Carole H., Huazhong Univ Sci \& Technol, Vis \& Learning Representat Grp, Wuhan, Hubei, Peoples R China.
+   Zeng, Guodong; Zheng, Guoyan, Univ Bern, Inst Surg Technol \& Biomech, Bern, Switzerland.
+   Zhang, Jianguo, Univ Dundee, Dept Comp, Dundee, Scotland.
+   Chen, Christopher, NUHS, Memory Aging \& Cognit Ctr, Singapore, Singapore.
+   van der Flier, Wiesje, Vrije Univ Amsterdam, Alzheimer Ctr, Amsterdam, Netherlands.
+   Barkhof, Frederik, Vrije Univ Amsterdam Med Ctr, Dept Radiol \& Nucl Med, Amsterdam, Netherlands.
+   Barkhof, Frederik, UCL, UCL Inst Neurol \& Healthcare Engn, London, England.}},
+DOI = {{10.1109/TMI.2019.2905770}},
+ISSN = {{0278-0062}},
+EISSN = {{1558-254X}},
+Keywords = {{Image segmentation; Three-dimensional displays; Manuals; White matter;
+   Biomedical imaging; Radiology; Magnetic resonance imaging (MRI); brain;
+   evaluation and performance; segmentation}},
+Keywords-Plus = {{SMALL VESSEL DISEASE; VALIDATION}},
+Research-Areas = {{Computer Science; Engineering; Imaging Science \& Photographic
+   Technology; Radiology, Nuclear Medicine \& Medical Imaging}},
+Web-of-Science-Categories  = {{Computer Science, Interdisciplinary Applications; Engineering,
+   Biomedical; Engineering, Electrical \& Electronic; Imaging Science \&
+   Photographic Technology; Radiology, Nuclear Medicine \& Medical Imaging}},
+Author-Email = {{h.kuijf@umcutrecht.nl}},
+ResearcherID-Numbers = {{Park, Hyunjin/A-1164-2007
+   Belyaev, Mikhail/M-4900-2016
+   Barkhof, Frederik/AAJ-6226-2020
+   Ghafoorian, Mohsen/AAH-7397-2019
+   Rittner, Leticia/B-9695-2012
+   Park, Bo-yong/AAM-8094-2020
+   Vilaplana, Veronica/O-1726-2014
+   de Bresser, Jeroen/AAL-4056-2021
+   Sudre, Carole H./AAX-6672-2020
+   Chen, Christopher/E-7023-2013
+   Solodushenkova, Anastasia/H-1732-2019
+   Casamitjana, Adria/ABB-3046-2021
+   Knight, Jesse/AAI-4075-2020
+   Zheng, Guoyan/C-8079-2014
+   Cardoso, M. Jorge/N-5511-2018
+   Llado, Xavier/L-1141-2014
+   Kuijf, Hugo/G-2711-2013
+   }},
+ORCID-Numbers = {{Park, Hyunjin/0000-0001-5681-8918
+   Belyaev, Mikhail/0000-0001-9906-6453
+   Barkhof, Frederik/0000-0003-3543-3706
+   Rittner, Leticia/0000-0001-8182-5554
+   Vilaplana, Veronica/0000-0001-6924-9961
+   de Bresser, Jeroen/0000-0003-0759-8407
+   Sudre, Carole H./0000-0001-5753-428X
+   Chen, Christopher/0000-0002-1047-9225
+   Knight, Jesse/0000-0002-0455-5455
+   Park, Bo-yong/0000-0001-7096-337X
+   Cardoso, M. Jorge/0000-0003-1284-2558
+   Mehrtash, Alireza/0000-0003-3703-5330
+   Llado, Xavier/0000-0003-2777-3479
+   Pezold, Simon/0000-0002-4998-8983
+   Kuijf, Hugo/0000-0001-6997-9059
+   zhang, jianguo/0000-0001-9317-0268
+   Li, Hongwei/0000-0002-5328-6407
+   Biesbroek, Matthijs/0000-0001-7017-2148
+   Dadar, Mahsa/0000-0003-4008-2672}},
+Funding-Acknowledgement = {{Hotchkiss Brain Institute; CAPES process PVECoordenacao de
+   Aperfeicoamento de Pessoal de Nivel Superior (CAPES)
+   {[}88881.062158/2014-01]; Spanish Ministerio de Economia y
+   Competitividad through the project MALEGRA {[}TEC2016-75976-R]; European
+   Regional Development Fund (ERDF)European Commission; Spanish Ministerio
+   de Educacin, Cultura y Deporte FPU Research Fellowship; National
+   Institute of Allergy and Infectious Diseases, USA, through the
+   Intramural Research Program; Natural Science and Engineering Research
+   Council of Canada (NSERC CGS-M); Ontario Ministry of Advanced Education
+   and Skills Development (OGS-M); National Natural Science Foundation of
+   ChinaNational Natural Science Foundation of China (NSFC) {[}61628212];
+   Ministerio de Ciencia y Tecnologia, SpainSpanish Government
+   {[}TIN2014-55710-R, DPI2017-86696-R]; National Research Foundation of
+   Korea (NRF) - Ministry of Education {[}2018R1D1A1B07044473]; Swiss
+   Multiple Sclerosis Society; U.S. National Institutes of HealthUnited
+   States Department of Health \& Human ServicesNational Institutes of
+   Health (NIH) - USA {[}P41EB015898]; Natural Sciences and Engineering
+   Research Council (NSERC) of CanadaNatural Sciences and Engineering
+   Research Council of Canada (NSERC); Canadian Institutes of Health
+   Research (CIHR)Canadian Institutes of Health Research (CIHR);
+   Alzheimer's Society {[}AS-JF-17-011]; Swiss National Science
+   FoundationSwiss National Science Foundation (SNSF)European Commission
+   {[}205321\_163224]; NIHR UCLH Biomedical Research Centre; Netherlands
+   Organization for Scientific Research (NWO) through the VICINetherlands
+   Organization for Scientific Research (NWO) {[}918.16.616]; NATIONAL
+   INSTITUTE OF BIOMEDICAL IMAGING AND BIOENGINEERINGUnited States
+   Department of Health \& Human ServicesNational Institutes of Health
+   (NIH) - USANIH National Institute of Biomedical Imaging \&
+   Bioengineering (NIBIB) {[}P41EB015898] Funding Source: NIH RePORTER}},
+Funding-Text = {{The work of M. Bento and L. Rittner was supported in part by the
+   Hotchkiss Brain Institute and in part by CAPES process PVE under Grant
+   88881.062158/2014-01. The work of A. Casamitjana was supported in part
+   by the Spanish Ministerio de Economia y Competitividad through the
+   project MALEGRA under Grant TEC2016-75976-R, in part by the European
+   Regional Development Fund (ERDF), and in part by the Spanish Ministerio
+   de Educacin, Cultura y Deporte FPU Research Fellowship. The work of D.
+   Jin and Z. Xu was supported by the National Institute of Allergy and
+   Infectious Diseases, USA, through the Intramural Research Program. The
+   work of A. Khademi and J. Knight was supported in part by the Natural
+   Science and Engineering Research Council of Canada (NSERC CGS-M) and in
+   part by the Ontario Ministry of Advanced Education and Skills
+   Development (OGS-M). The work of H. Li and J. Zhang was supported by the
+   National Natural Science Foundation of China under Grant 61628212. The
+   work of X. Llado and S. Valverde was supported in part by the Ministerio
+   de Ciencia y Tecnologia, Spain, under Grant TIN2014-55710-R and Grant
+   DPI2017-86696-R. The work of M. Luna and S. H. Park was supported by the
+   National Research Foundation of Korea (NRF) through the Basic Science
+   Research Program funded by the Ministry of Education under Grant
+   2018R1D1A1B07044473. The work of R. McKinley and R. Wiest was supported
+   by the Swiss Multiple Sclerosis Society. The work of A. Mehrtash was
+   supported in part by the U.S. National Institutes of Health under Grant
+   P41EB015898, in part by the Natural Sciences and Engineering Research
+   Council (NSERC) of Canada, and in part by the Canadian Institutes of
+   Health Research (CIHR). The work of C. H. Sudre was supported by the
+   Alzheimer's Society Junior Research Fellowship under Grant AS-JF-17-011.
+   The work of V. Vilaplana was supported in part by the Spanish Ministerio
+   de Economia y Competitividad through the project MALEGRA under Grant
+   TEC2016-75976-R and in part by the European Regional Development Fund
+   (ERDF). The work of G. Zeng and G. Zheng was supported in part by the
+   Swiss National Science Foundation under Project 205321\_163224. The work
+   of F. Barkhof was supported by the NIHR UCLH Biomedical Research Centre.
+   The work of G. J. Biessels was supported by The Netherlands Organization
+   for Scientific Research (NWO) through the VICI under Grant 918.16.616.}},
+Number-of-Cited-References = {{69}},
+Times-Cited = {{46}},
+Usage-Count-Last-180-days = {{2}},
+Usage-Count-Since-2013 = {{14}},
+Journal-ISO = {{IEEE Trans. Med. Imaging}},
+Doc-Delivery-Number = {{JJ8WT}},
+Unique-ID = {{WOS:000494433300007}},
+OA = {{Green Submitted, Green Published, Green Accepted}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000446176701280,
+Author = {Seliverstov, Y. and Borzov, A. and van Duijn, E. and Landwehrmeyer, B.
+   and Belyaev, M.},
+Title = {{Prediction of suicidality in Huntington disease: Analysis of Enroll-HD
+   data using machine learning approach}},
+Journal = {{MOVEMENT DISORDERS}},
+Year = {{2018}},
+Volume = {{33}},
+Number = {{2}},
+Meeting = {{805}},
+Pages = {{S366}},
+Month = {{OCT}},
+Note = {{International Congress of Parkinson's Disease and Movement Disorders,
+   Hong Kong, HONG KONG, OCT 05-09, 2018}},
+Publisher = {{WILEY}},
+Address = {{111 RIVER ST, HOBOKEN 07030-5774, NJ USA}},
+Type = {{Meeting Abstract}},
+Language = {{English}},
+ISSN = {{0885-3185}},
+EISSN = {{1531-8257}},
+Research-Areas = {{Neurosciences \& Neurology}},
+Web-of-Science-Categories  = {{Clinical Neurology}},
+ResearcherID-Numbers = {{Belyaev, Mikhail/M-4900-2016
+   Borzov, Artyom/AAN-7332-2020
+   Seliverstov, Yury A/F-8362-2015}},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453
+   Seliverstov, Yury A/0000-0002-6400-6378}},
+Number-of-Cited-References = {{0}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{0}},
+Journal-ISO = {{Mov. Disord.}},
+Doc-Delivery-Number = {{GV5WS}},
+Unique-ID = {{WOS:000446176701280}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000452286500099,
+Author = {Seliverstov, Yury and Borzov, Artyom and van Duijn, Erik and
+   Landwehrmeyer, Bernhard and Belyaev, Mikhail},
+Title = {{Machine Learning Approach in Analysis of Enroll-HD Data for Suicidality
+   Prediction in Huntington Disease}},
+Journal = {{NEUROTHERAPEUTICS}},
+Year = {{2018}},
+Volume = {{15}},
+Number = {{4}},
+Meeting = {{73}},
+Pages = {{1196}},
+Month = {{OCT}},
+Publisher = {{SPRINGER}},
+Address = {{233 SPRING ST, NEW YORK, NY 10013 USA}},
+Type = {{Meeting Abstract}},
+Language = {{English}},
+Affiliation = {{Seliverstov, Yury, Res Ctr Neurol, Moscow, Russia.
+   Borzov, Artyom, Inst Informat Transmiss Problems, Moscow, Russia.
+   van Duijn, Erik, Leiden Univ, Med Ctr, Leiden, Netherlands.
+   Landwehrmeyer, Bernhard, Ulm Univ Hosp, Ulm, Germany.
+   Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.}},
+ISSN = {{1933-7213}},
+EISSN = {{1878-7479}},
+Research-Areas = {{Neurosciences \& Neurology; Pharmacology \& Pharmacy}},
+Web-of-Science-Categories  = {{Clinical Neurology; Neurosciences; Pharmacology \& Pharmacy}},
+Author-Email = {{doctor.goody@gmail.com}},
+ResearcherID-Numbers = {{Seliverstov, Yury A/F-8362-2015
+   Borzov, Artyom/AAN-7332-2020}},
+ORCID-Numbers = {{Seliverstov, Yury A/0000-0002-6400-6378
+   }},
+Number-of-Cited-References = {{0}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{0}},
+Journal-ISO = {{Neurotherapeutics}},
+Doc-Delivery-Number = {{HD1QN}},
+Unique-ID = {{WOS:000452286500099}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000444461500001,
+Author = {Winzeck, Stefan and Hakim, Arsany and McKinley, Richard and Pinto, Jose
+   A. A. D. S. R. and Alves, Victor and Silva, Carlos and Pisov, Maxim and
+   Krivov, Egor and Belyaev, Mikhail and Monteiro, Miguel and Oliveira,
+   Arlindo and Choi, Youngwon and Palk, Myunghee Cho and Kwon, Yongchan and
+   Lee, Hanbyul and Kim, Beom Joon and Won, Joong-Ho and Islam, Mobarakol
+   and Ren, Hongliang and Robben, David and Suetens, Paul and Gong, Enhao
+   and Niu, Yilin and Xu, Junshen and Pauly, John M. and Lucas, Christian
+   and Heinrich, Mattias P. and Rivera', Luis C. and Castillo, Laura S. and
+   Daza, Laura A. and Beers, Andrew L. and Arbelaers, Pablo and Maier,
+   Oskar and Chang, Ken and Brown, James M. and Kapalthy-Cramer, Jayashree
+   and Zaharchuk, Greg and Wiest, Roland and Reyes, Mauricio},
+Title = {{ISLES 2016 and 2017-Benchmarking Ischemic Stroke Lesion Outcome
+   Prediction Based on Multispectral MRI}},
+Journal = {{FRONTIERS IN NEUROLOGY}},
+Year = {{2018}},
+Volume = {{9}},
+Month = {{SEP 13}},
+Abstract = {{Performance of models highly depend not only on the used algorithm but
+   also the data set it was applied to. This makes the comparison of newly
+   developed tools to previously published approaches difficult. Either
+   researchers need to implement others' algorithms first, to establish an
+   adequate benchmark on their data, or a direct comparison of new and old
+   techniques is infeasible. The Ischemic Stroke Lesion Segmentation
+   (ISLES) challenge, which has ran now consecutively for 3 years, aims to
+   address this problem of comparability. ISLES 2016 and 2017 focused on
+   lesion outcome prediction after ischemic stroke: By providing a
+   uniformly pre-processed data set, researchers from all over the world
+   could apply their algorithm directly. A total of nine teams participated
+   in ISLES 2015, and 15 teams participated in ISLES 2016. Their
+   performance was evaluated in a fair and transparent way to identify the
+   state-of-the-art among all submissions. Top ranked teams almost always
+   employed deep learning tools, which were predominately convolutional
+   neural networks (CNNs). Despite the great efforts, lesion outcome
+   prediction persists challenging. The annotated data set remains publicly
+   available and new approaches can be compared directly via the online
+   evaluation system, serving as a continuing benchmark
+   (www.isles-challenge.org).}},
+Publisher = {{FRONTIERS MEDIA SA}},
+Address = {{AVENUE DU TRIBUNAL FEDERAL 34, LAUSANNE, CH-1015, SWITZERLAND}},
+Type = {{Article}},
+Language = {{English}},
+Affiliation = {{Winzeck, S (Corresponding Author), Univ Cambridge, Dept Med, Univ Div Anaesthesia, Cambridge, England.
+   Reyes, M (Corresponding Author), Univ Bern, Inst Surg Technol \& Biomech, Med Image Anal, Bern, Switzerland.
+   Winzeck, Stefan, Univ Cambridge, Dept Med, Univ Div Anaesthesia, Cambridge, England.
+   Hakim, Arsany; McKinley, Richard; Wiest, Roland, Univ Bern, SCAN, Inst Diagnost \& Intervent Neuroradiol, Inselspital,Bern Univ Hosp, Bern, Switzerland.
+   Pinto, Jose A. A. D. S. R.; Alves, Victor; Silva, Carlos, Univ Minho, CMEMS UMinho Res Unit, Braga, Portugal.
+   Pisov, Maxim, Moscow Inst Phys \& Technol, Dolgoprudnyi, Russia.
+   Pisov, Maxim; Krivov, Egor; Belyaev, Mikhail, Inst Informat Transmiss Problems RAS, Moscow, Russia.
+   Monteiro, Miguel; Oliveira, Arlindo, Inst Engn Sostemas \& Comp Invest \& Desenvolviment, Lisbon, Portugal.
+   Choi, Youngwon; Palk, Myunghee Cho; Kwon, Yongchan; Lee, Hanbyul; Won, Joong-Ho, Seoul Natl Univ, Dept Stat, Seoul, South Korea.
+   Kim, Beom Joon, Seoul Natl Univ, Bundang Hosp, Dept Neurol, Seongnam, South Korea.
+   Kim, Beom Joon, Seoul Natl Univ, Bundang Hosp, Cerebrovasc Ctr, Seongnam, South Korea.
+   Islam, Mobarakol; Ren, Hongliang, Natl Univ Singapore, Dept Biomed Engn, Singapore, Singapore.
+   Robben, David; Suetens, Paul, Katholieke Univ Leuven, ESAT PSI, Leuven, Belgium.
+   Gong, Enhao; Xu, Junshen; Pauly, John M., Stanford Univ, Elect Engn \& Radiol, Stanford, CA 94305 USA.
+   Niu, Yilin, Tsinghua Univ, Comp Sci, Beijing, Peoples R China.
+   Lucas, Christian; Heinrich, Mattias P.; Maier, Oskar, Univ Lubeck, Inst Med Informat, Lubeck, Germany.
+   Rivera', Luis C.; Castillo, Laura S.; Daza, Laura A.; Arbelaers, Pablo, Univ Los Andes, Biomed Engn, Bogota, Colombia.
+   Beers, Andrew L.; Chang, Ken; Brown, James M.; Kapalthy-Cramer, Jayashree, Harvard, Athinoula A Martinos Ctr Biomed Imaging, Charlestown, MA USA.
+   Zaharchuk, Greg, Stanford Univ, Dept Radiol, Stanford, CA 94305 USA.
+   Reyes, Mauricio, Univ Bern, Inst Surg Technol \& Biomech, Med Image Anal, Bern, Switzerland.}},
+DOI = {{10.3389/fneur.2018.00679}},
+Article-Number = {{679}},
+ISSN = {{1664-2295}},
+Keywords = {{stroke; stroke outcome; machine learning; deep learning; benchmarking;
+   datasets; MRI; prediction models}},
+Keywords-Plus = {{SEGMENTATION; TUMOR}},
+Research-Areas = {{Neurosciences \& Neurology}},
+Web-of-Science-Categories  = {{Clinical Neurology; Neurosciences}},
+Author-Email = {{sw742@cam.ac.uk
+   mauricio.reyes@istb.unibe.ch}},
+ResearcherID-Numbers = {{Pisov, Maxim/AAN-7302-2020
+   Silva, Carlos/J-1190-2014
+   Kim, Beom Joon/C-2904-2011
+   Alves, Victor/D-1319-2009
+   Belyaev, Mikhail/M-4900-2016
+   Hakim, Arsany/I-2505-2019
+   Monteiro, Miguel/AAE-6334-2021
+   Lucas, Christian/R-4504-2019
+   Oliveira, Arlindo/C-1700-2008
+   }},
+ORCID-Numbers = {{Silva, Carlos/0000-0002-1015-5095
+   Kim, Beom Joon/0000-0002-2719-3012
+   Alves, Victor/0000-0003-1819-7051
+   Belyaev, Mikhail/0000-0001-9906-6453
+   Hakim, Arsany/0000-0001-9431-1069
+   Oliveira, Arlindo/0000-0001-8638-5594
+   Rivera Monroy, Luis Carlos/0000-0001-8232-8920
+   Pisov, Maxim/0000-0001-8727-5792
+   McKinley, Richard/0000-0001-8250-6117
+   Islam, Mobarakol/0000-0002-7162-2822
+   Brown, James/0000-0001-7636-4554}},
+Funding-Acknowledgement = {{Fundacao para a Ciencia e Tecnologia (FCT), PortugalPortuguese
+   Foundation for Science and Technology {[}PD/BD/113968/2015];
+   FCTPortuguese Foundation for Science and TechnologyEuropean Commission
+   {[}UID/EEA/04436/2013]; FEDER funds through COMPETE 2020
+   {[}POCI-01-0145-FEDER-006941]; National Institute of Biomedical Imaging
+   and Bioengineering (NIBIB) of the National Institutes of HealthUnited
+   States Department of Health \& Human ServicesNational Institutes of
+   Health (NIH) - USANIH National Institute of Biomedical Imaging \&
+   Bioengineering (NIBIB) {[}5T32EB1680]; NIH Blueprint for Neuroscience
+   ResearchUnited States Department of Health \& Human ServicesNational
+   Institutes of Health (NIH) - USA {[}T90DA022759/R90DA023427]; Germany's
+   Excellence Initiative {[}DFG GSC 235/2]; National Research National
+   Research Foundation of Korea (NRF) MSIT {[}NRF-2016R1C1B1012002]; MSIT
+   {[}2014R1A4A1007895]; Swiss National Science FoundationSwiss National
+   Science Foundation (SNSF)European Commission {[}NRF-2017R1A2B4008956,
+   DACH 320030L\_163363]; NATIONAL INSTITUTE OF BIOMEDICAL IMAGING AND
+   BIOENGINEERINGUnited States Department of Health \& Human
+   ServicesNational Institutes of Health (NIH) - USANIH National Institute
+   of Biomedical Imaging \& Bioengineering (NIBIB) {[}T32EB001680,
+   P41EB015891] Funding Source: NIH RePORTER; NATIONAL INSTITUTE ON DRUG
+   ABUSEUnited States Department of Health \& Human ServicesNational
+   Institutes of Health (NIH) - USANIH National Institute on Drug Abuse
+   (NIDA)European Commission {[}T90DA022759, R90DA023427] Funding Source:
+   NIH RePORTER}},
+Funding-Text = {{Fundacao para a Ciencia e Tecnologia (FCT), Portugal (scholarship number
+   PD/BD/113968/2015). FCT with the UID/EEA/04436/2013, by FEDER funds
+   through COMPETE 2020, POCI-01-0145-FEDER-006941. NIH Blueprint for
+   Neuroscience Research (T90DA022759/R90DA023427) and the National
+   Institute of Biomedical Imaging and Bioengineering (NIBIB) of the
+   National Institutes of Health under award number 5T32EB1680. The content
+   is solely the responsibility of the authors and does not necessarily
+   represent the official views of the National Institutes of Health.
+   PAC-PRECISE-LISBOA-01-0145-FEDER-016394. FEDER-POR Lisboa 2020-Programa
+   Operacional Regional de Lisboa PORTUGAL 2020 and Fundacao para a Ciencia
+   e a Tecnologia. GPU computing resources provided by the MGH and BWH
+   Center for Clinical Data Science Graduate School for Computing in
+   Medicine and Life Sciences funded by Germany's Excellence Initiative
+   {[}DFG GSC 235/2]. National Research National Research Foundation of
+   Korea (NRF) MSIT, NRF-2016R1C1B1012002, MSIT, No. 2014R1A4A1007895,
+   NRF-2017R1A2B4008956 Swiss National Science Foundation-DACH
+   320030L\_163363.}},
+Number-of-Cited-References = {{41}},
+Times-Cited = {{54}},
+Usage-Count-Last-180-days = {{1}},
+Usage-Count-Since-2013 = {{7}},
+Journal-ISO = {{Front. Neurol.}},
+Doc-Delivery-Number = {{GT4GF}},
+Unique-ID = {{WOS:000444461500001}},
+OA = {{Green Published, gold}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000446126000153,
+Author = {Seliverstov, Yury and Borzov, Artyom and van Duijn, Erik and
+   Landwehrmeyer, Bernhard and Belyaev, Mikhail},
+Title = {{MACHINE LEARNING APPROACH IN ANALYSIS OF ENROLL-HD DATA FOR SUICIDALITY
+   PREDICTION IN HUNTINGTON DISEASE}},
+Journal = {{JOURNAL OF NEUROLOGY NEUROSURGERY AND PSYCHIATRY}},
+Year = {{2018}},
+Volume = {{89}},
+Number = {{1}},
+Meeting = {{F49}},
+Pages = {{A57}},
+Month = {{SEP}},
+Note = {{Plenary Meeting of the European-Huntington's-Disease-Network (EHDN),
+   Vienna, AUSTRIA, 2018}},
+Organization = {{European Huntingtons Dis Network}},
+Publisher = {{BMJ PUBLISHING GROUP}},
+Address = {{BRITISH MED ASSOC HOUSE, TAVISTOCK SQUARE, LONDON WC1H 9JR, ENGLAND}},
+Type = {{Meeting Abstract}},
+Language = {{English}},
+Affiliation = {{Seliverstov, Yury, Res Ctr Neurol, Moscow, Russia.
+   Borzov, Artyom, Inst Informat Transmiss Problems, Moscow, Russia.
+   van Duijn, Erik, Leiden Univ, Med Ctr, Leiden, Netherlands.
+   Landwehrmeyer, Bernhard, Ulm Univ Hosp, Ulm, Germany.
+   Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.}},
+DOI = {{10.1136/jnnp-2018-EHDN.152}},
+ISSN = {{0022-3050}},
+EISSN = {{1468-330X}},
+Research-Areas = {{Neurosciences \& Neurology; Psychiatry; Surgery}},
+Web-of-Science-Categories  = {{Clinical Neurology; Psychiatry; Surgery}},
+ResearcherID-Numbers = {{Seliverstov, Yury A/F-8362-2015
+   Borzov, Artyom/AAN-7332-2020
+   Belyaev, Mikhail/M-4900-2016}},
+ORCID-Numbers = {{Seliverstov, Yury A/0000-0002-6400-6378
+   Belyaev, Mikhail/0000-0001-9906-6453}},
+Number-of-Cited-References = {{0}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{1}},
+Journal-ISO = {{J. Neurol. Neurosurg. Psychiatry}},
+Doc-Delivery-Number = {{GV5FG}},
+Unique-ID = {{WOS:000446126000153}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000453090802014,
+Author = {Seliverstov, Yury and Diagovchenko, Dmitrii and Kravchenko, Michael and
+   Babin, Mikhail and Fedotova, Ekaterina and Belyaev, Mikhail},
+Title = {{Hypomimia detection with a smartphone camera as a possible
+   self-screening tool for Parkinson disease}},
+Journal = {{NEUROLOGY}},
+Year = {{2018}},
+Volume = {{90}},
+Number = {{15}},
+Meeting = {{P3.047}},
+Month = {{APR 10}},
+Note = {{70th Annual Meeting of the American-Academy-of-Neurology (AAN), Los
+   Angeles, CA, APR 21-27, 2018}},
+Organization = {{Amer Acad Neurol}},
+Publisher = {{LIPPINCOTT WILLIAMS \& WILKINS}},
+Address = {{TWO COMMERCE SQ, 2001 MARKET ST, PHILADELPHIA, PA 19103 USA}},
+Type = {{Meeting Abstract}},
+Language = {{English}},
+Affiliation = {{Seliverstov, Yury; Kravchenko, Michael; Fedotova, Ekaterina, Res Ctr Neurol, Moscow, Russia.
+   Diagovchenko, Dmitrii; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Diagovchenko, Dmitrii, Moscow Inst Phys \& Technol, Moscow, Russia.
+   Babin, Mikhail, Lomonosov Moscow State Univ, Moscow, Russia.
+   Belyaev, Mikhail, Kharkevich Inst, Inst Informat Transmiss Problems, Moscow, Russia.}},
+ISSN = {{0028-3878}},
+EISSN = {{1526-632X}},
+Research-Areas = {{Neurosciences \& Neurology}},
+Web-of-Science-Categories  = {{Clinical Neurology}},
+ResearcherID-Numbers = {{Belyaev, Mikhail/M-4900-2016
+   Fedotova, Ekaterina Y/C-9072-2012
+   Kravchenko, Michael A/B-2596-2012
+   Seliverstov, Yury A/F-8362-2015}},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453
+   Kravchenko, Michael A/0000-0001-5187-5518
+   Seliverstov, Yury A/0000-0002-6400-6378}},
+Number-of-Cited-References = {{0}},
+Times-Cited = {{1}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{7}},
+Journal-ISO = {{Neurology}},
+Doc-Delivery-Number = {{HE2FF}},
+Unique-ID = {{WOS:000453090802014}},
+DA = {{2021-10-27}},
+}
+
+@inproceedings{ WOS:000432603300032,
+Author = {Krivov, Egor and Pisov, Maxim and Belyaev, Mikhail},
+Editor = {{Crimi, A and Bakas, S and Kuijf, H and Menze, B and Reyes, M}},
+Title = {{MRI Augmentation via Elastic Registration for Brain Lesions Segmentation}},
+Booktitle = {{BRAINLESION: GLIOMA, MULTIPLE SCLEROSIS, STROKE AND TRAUMATIC BRAIN
+   INJURIES, BRAINLES 2017}},
+Series = {{Lecture Notes in Computer Science}},
+Year = {{2018}},
+Volume = {{10670}},
+Pages = {{369-380}},
+Note = {{3rd International Workshop on Brain-Lesion (BrainLes) held jointly at
+   the Conference on Medical Image Computing for Computer Assisted
+   Intervention (MICCAI), Quebec City, CANADA, SEP 14, 2017}},
+Organization = {{Univ Penn, Ctr Biomed Image Comp \& Analyt; Univ Med Ctr Utrecht, Image
+   Sci Inst}},
+Abstract = {{Datasets for medical image segmentation usually contain a very limited
+   number of training examples. However, deep learning methods prove to be
+   very competitive for such data analysis problems. Surprisingly, quite
+   limited data augmentation is used during training. We presume that it's
+   due to historical reasons: standardization and normalization of medical
+   images dominate over methods for increasing the size of a training set
+   by artificial transformation of images. We assume that it is partly
+   caused by the absence of methods which preserve properties of adequately
+   preprocessed medical images. In this paper, we propose a new method for
+   brain MRI augmentation, which allows us to map a lesion from an original
+   image to a healthy brain. We compare the performance of U-Net and
+   DeepMedic, two popular deep learning architectures, using the proposed
+   method, a set of classical image augmentation methods, and a combination
+   of both approaches. Our results suggest that at least one of the
+   individual strategies, as well as their combination, provide an increase
+   in accuracy of brain lesions segmentation if the training sample is
+   relatively small.}},
+Publisher = {{SPRINGER INTERNATIONAL PUBLISHING AG}},
+Address = {{GEWERBESTRASSE 11, CHAM, CH-6330, SWITZERLAND}},
+Type = {{Proceedings Paper}},
+Language = {{English}},
+Affiliation = {{Belyaev, M (Corresponding Author), Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Belyaev, M (Corresponding Author), Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Krivov, Egor; Pisov, Maxim; Belyaev, Mikhail, Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Krivov, Egor; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Krivov, Egor; Pisov, Maxim, Moscow Inst Phys \& Technol, Dolgoprudnyi, Russia.}},
+DOI = {{10.1007/978-3-319-75238-9\_32}},
+ISSN = {{0302-9743}},
+EISSN = {{1611-3349}},
+ISBN = {{978-3-319-75238-9; 978-3-319-75237-2}},
+Keywords = {{Image augmentation; CNN; Segmentation; MRI BraTS}},
+Keywords-Plus = {{ALGORITHMS}},
+Research-Areas = {{Computer Science; Neurosciences \& Neurology}},
+Web-of-Science-Categories  = {{Computer Science, Theory \& Methods; Clinical Neurology; Neurosciences;
+   Neuroimaging}},
+Author-Email = {{m.belyaev@skoltech.ru}},
+ResearcherID-Numbers = {{Pisov, Maxim/AAN-7302-2020
+   Belyaev, Mikhail/M-4900-2016
+   }},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453
+   Pisov, Maxim/0000-0001-8727-5792}},
+Number-of-Cited-References = {{21}},
+Times-Cited = {{2}},
+Usage-Count-Last-180-days = {{1}},
+Usage-Count-Since-2013 = {{3}},
+Doc-Delivery-Number = {{BK2EH}},
+Unique-ID = {{WOS:000432603300032}},
+DA = {{2021-10-27}},
+}
+
+@inproceedings{ WOS:000477924600014,
+Author = {Krivov, Egor and Kostjuchenko, Valery and Dalechina, Alexandra and
+   Shirokikh, Boris and Makarchuk, Gleb and Denisenko, Alexander and
+   Golanov, Andrey and Belyaev, Mikhail},
+Editor = {{Bai, W and Sanroma, G and Wu, G and Munsell, BC and Zhan, Y and Coupe, P}},
+Title = {{Tumor Delineation for Brain Radiosurgery by a ConvNet and Non-uniform
+   Patch Generation}},
+Booktitle = {{PATCH-BASED TECHNIQUES IN MEDICAL IMAGING, PATCH-MI 2018}},
+Series = {{Lecture Notes in Computer Science}},
+Year = {{2018}},
+Volume = {{11075}},
+Pages = {{122-129}},
+Note = {{4th International Workshop on Patch-Based Techniques in Medical Imaging
+   (Patch-MI), Granada, SPAIN, SEP 20, 2018}},
+Abstract = {{Deep learning methods are actively used for brain lesion segmentation.
+   One of the most popular models is DeepMedic, which was developed for
+   segmentation of relatively large lesions like glioma and ischemic
+   stroke. In our work, we consider segmentation of brain tumors
+   appropriate to stereotactic radiosurgery which limits typical lesion
+   sizes. These differences in target volumes lead to a large number of
+   false negatives (especially for small lesions) as well as to an
+   increased number of false positives for DeepMedic. We propose a new
+   patch-sampling procedure to increase network performance for small
+   lesions. We used a 6-year dataset from a stereotactic radiosurgery
+   center. To evaluate our approach, we conducted experiments with the
+   three most frequent brain tumors: metastasis, meningioma, schwannoma. In
+   addition to cross-validation, we estimated quality on a hold-out test
+   set which was collected several years later than the train one. The
+   experimental results show solid improvements in both cases.}},
+Publisher = {{SPRINGER INTERNATIONAL PUBLISHING AG}},
+Address = {{GEWERBESTRASSE 11, CHAM, CH-6330, SWITZERLAND}},
+Type = {{Proceedings Paper}},
+Language = {{English}},
+Affiliation = {{Krivov, E (Corresponding Author), Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Krivov, E (Corresponding Author), Moscow Inst Phys \& Technol, Moscow, Russia.
+   Krivov, Egor; Shirokikh, Boris; Belyaev, Mikhail, Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Krivov, Egor; Shirokikh, Boris, Moscow Inst Phys \& Technol, Moscow, Russia.
+   Kostjuchenko, Valery; Dalechina, Alexandra, Moscow Gamma Knife Ctr, Moscow, Russia.
+   Shirokikh, Boris; Makarchuk, Gleb; Denisenko, Alexander; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Golanov, Andrey, Burdenko Neurosurg Inst, Moscow, Russia.}},
+DOI = {{10.1007/978-3-030-00500-9\_14}},
+ISSN = {{0302-9743}},
+EISSN = {{1611-3349}},
+ISBN = {{978-3-030-00500-9; 978-3-030-00499-6}},
+Keywords = {{Stereotactic radiosurgery; Segmentation; CNN; MRI}},
+Keywords-Plus = {{SEGMENTATION}},
+Research-Areas = {{Computer Science; Imaging Science \& Photographic Technology}},
+Web-of-Science-Categories  = {{Computer Science, Theory \& Methods; Imaging Science \& Photographic
+   Technology}},
+Author-Email = {{e.a.krivov@gmail.com
+   m.belyaev@skoltech.ru}},
+ResearcherID-Numbers = {{Golanov, Andrey/ABF-4714-2020
+   Belyaev, Mikhail/M-4900-2016
+   Golanov, Andrey/AAO-6527-2020
+   Dalechina, Alexandra/A-9431-2015}},
+ORCID-Numbers = {{Golanov, Andrey/0000-0002-0976-4547
+   Belyaev, Mikhail/0000-0001-9906-6453
+   Dalechina, Alexandra/0000-0003-0782-0821}},
+Funding-Acknowledgement = {{Russian Science FoundationRussian Science Foundation (RSF)
+   {[}17-11-01390]}},
+Funding-Text = {{The results of sections 1, 2, 4 and 5 are based on the scientific
+   research conducted at IITP RAS and supported by the Russian Science
+   Foundation under grant 17-11-01390.}},
+Number-of-Cited-References = {{10}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{0}},
+Doc-Delivery-Number = {{BN2ZA}},
+Unique-ID = {{WOS:000477924600014}},
+OA = {{Green Submitted}},
+DA = {{2021-10-27}},
+}
+
+@inproceedings{ WOS:000570425300100,
+Author = {Pimkin, Artem and Makarchuk, Gleb and Kondratenko, Vladimir and Pisov,
+   Maxim and Krivov, Egor and Belyaev, Mikhail},
+Editor = {{Campilho, A and Karray, F and Romeny, BT}},
+Title = {{Ensembling Neural Networks for Digital Pathology Images Classification
+   and Segmentation}},
+Booktitle = {{IMAGE ANALYSIS AND RECOGNITION (ICIAR 2018)}},
+Series = {{Lecture Notes in Computer Science}},
+Year = {{2018}},
+Volume = {{10882}},
+Pages = {{877-886}},
+Note = {{15th International Conference on Image Analysis and Recognition (ICIAR),
+   Povoa de Varzim, PORTUGAL, JUN 27-29, 2018}},
+Organization = {{Assoc Image \& Machine Intelligence}},
+Abstract = {{In the last years, neural networks have proven to be a powerful
+   framework for various image analysis problems. However, some application
+   domains have specific limitations. Notably, digital pathology is an
+   example of such fields due to tremendous image sizes and quite limited
+   number of training examples available. In this paper, we adopt
+   state-of-the-art convolutional neural networks (CNN) architectures for
+   digital pathology images analysis. We propose to classify image patches
+   to increase effective sample size and then to apply an ensembling
+   technique to build prediction for the original images. To validate the
+   developed approaches, we conducted experiments with Breast Cancer
+   Histology Challenge dataset and obtained 90\% accuracy for the 4-class
+   tissue classification task.}},
+Publisher = {{SPRINGER INTERNATIONAL PUBLISHING AG}},
+Address = {{GEWERBESTRASSE 11, CHAM, CH-6330, SWITZERLAND}},
+Type = {{Proceedings Paper}},
+Language = {{English}},
+Affiliation = {{Pisov, M (Corresponding Author), Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Pisov, M (Corresponding Author), Moscow Inst Phys \& Technol, Moscow, Russia.
+   Pimkin, Artem; Makarchuk, Gleb; Kondratenko, Vladimir; Krivov, Egor; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Pimkin, Artem; Makarchuk, Gleb; Kondratenko, Vladimir; Pisov, Maxim; Krivov, Egor; Belyaev, Mikhail, Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Pimkin, Artem; Makarchuk, Gleb; Kondratenko, Vladimir; Pisov, Maxim; Krivov, Egor, Moscow Inst Phys \& Technol, Moscow, Russia.}},
+DOI = {{10.1007/978-3-319-93000-8\_100}},
+ISSN = {{0302-9743}},
+EISSN = {{1611-3349}},
+ISBN = {{978-3-319-93000-8; 978-3-319-92999-6}},
+Keywords = {{Convolutional networks; Ensembles; Digital pathology}},
+Research-Areas = {{Computer Science; Imaging Science \& Photographic Technology}},
+Web-of-Science-Categories  = {{Computer Science, Theory \& Methods; Imaging Science \& Photographic
+   Technology}},
+Author-Email = {{artem.pimkin@phystech.edu
+   vladimir.kondratenko@phystech.edu
+   maksim.pisov@phystech.edu}},
+ResearcherID-Numbers = {{Belyaev, Mikhail/M-4900-2016
+   Pisov, Maxim/AAN-7302-2020
+   }},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453
+   Pisov, Maxim/0000-0001-8727-5792}},
+Number-of-Cited-References = {{14}},
+Times-Cited = {{9}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{2}},
+Doc-Delivery-Number = {{BP9PX}},
+Unique-ID = {{WOS:000570425300100}},
+OA = {{Green Submitted}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000424080900082,
+Author = {Seliverstov, Yury and Borzov, Artyom and Niyazov, Ravil and Belyaev,
+   Mikhail},
+Title = {{Comparative Retrospective Analysis of Tetrabenazine and Olanzapine in
+   Management of Huntington's Disease Based on Data from the Worldwide
+   Observational Study Enroll-HD}},
+Journal = {{NEUROTHERAPEUTICS}},
+Year = {{2018}},
+Volume = {{15}},
+Number = {{1}},
+Meeting = {{63}},
+Pages = {{264}},
+Month = {{JAN}},
+Publisher = {{SPRINGER}},
+Address = {{233 SPRING ST, NEW YORK, NY 10013 USA}},
+Type = {{Meeting Abstract}},
+Language = {{English}},
+Affiliation = {{Seliverstov, Yury, Res Ctr Neurol, Dept Neurogenet, Moscow, Russia.
+   Borzov, Artyom; Belyaev, Mikhail, Kharkevich Inst, Inst Informat Transmiss Problems, Moscow, Russia.
+   Borzov, Artyom, Moscow Inst Phys \& Technol, Moscow, Russia.
+   Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.
+   Niyazov, Ravil, Ctr Sci Advice Ltd, Moscow, Russia.}},
+ISSN = {{1933-7213}},
+EISSN = {{1878-7479}},
+Research-Areas = {{Neurosciences \& Neurology; Pharmacology \& Pharmacy}},
+Web-of-Science-Categories  = {{Clinical Neurology; Neurosciences; Pharmacology \& Pharmacy}},
+ResearcherID-Numbers = {{Belyaev, Mikhail/M-4900-2016
+   Borzov, Artyom/AAN-7332-2020
+   Seliverstov, Yury A/F-8362-2015}},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453
+   Seliverstov, Yury A/0000-0002-6400-6378}},
+Number-of-Cited-References = {{0}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{1}},
+Journal-ISO = {{Neurotherapeutics}},
+Doc-Delivery-Number = {{FU8CV}},
+Unique-ID = {{WOS:000424080900082}},
+DA = {{2021-10-27}},
+}
+
+@article{ WOS:000402672302099,
+Author = {Seliverstov, Y. and Shulgina, E. and Illarioshkin, S. and Belyaev, M.},
+Title = {{A modified model for prediction of Huntington disease age of onset based
+   on length of CAG repeat expansion}},
+Journal = {{MOVEMENT DISORDERS}},
+Year = {{2017}},
+Volume = {{32}},
+Number = {{2}},
+Meeting = {{473}},
+Month = {{JUN}},
+Note = {{21st International Congress of Parkinson's Disease and Movement
+   Disorders, Vancouver, CANADA, JUN 04-08, 2017}},
+Publisher = {{WILEY}},
+Address = {{111 RIVER ST, HOBOKEN 07030-5774, NJ USA}},
+Type = {{Meeting Abstract}},
+Language = {{English}},
+ISSN = {{0885-3185}},
+EISSN = {{1531-8257}},
+Research-Areas = {{Neurosciences \& Neurology}},
+Web-of-Science-Categories  = {{Clinical Neurology}},
+ResearcherID-Numbers = {{Romanenkova, Evgeniya/AAO-1305-2020
+   Illarioshkin, Sergey N/C-9033-2012
+   Seliverstov, Yury A/F-8362-2015
+   Belyaev, Mikhail/M-4900-2016}},
+ORCID-Numbers = {{Seliverstov, Yury A/0000-0002-6400-6378
+   Belyaev, Mikhail/0000-0001-9906-6453}},
+Number-of-Cited-References = {{0}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{2}},
+Journal-ISO = {{Mov. Disord.}},
+Doc-Delivery-Number = {{EW7EJ}},
+Unique-ID = {{WOS:000402672302099}},
+DA = {{2021-10-27}},
+}
+
+@inproceedings{ WOS:000414283200194,
+Author = {Korolev, Sergey and Safiullin, Amir and Belyaev, Mikhail and Dodonova,
+   Yulia},
+Book-Group-Author = {{IEEE}},
+Title = {{RESIDUAL AND PLAIN CONVOLUTIONAL NEURAL NETWORKS FOR 3D BRAIN MRI
+   CLASSIFICATION}},
+Booktitle = {{2017 IEEE 14TH INTERNATIONAL SYMPOSIUM ON BIOMEDICAL IMAGING (ISBI 2017)}},
+Year = {{2017}},
+Pages = {{835-838}},
+Note = {{IEEE 14th International Symposium on Biomedical Imaging (ISBI) - From
+   Nano to Macro, Melbourne, AUSTRALIA, APR 18-21, 2017}},
+Organization = {{IEEE; EMB; IEEE Signal Proc Soc}},
+Abstract = {{In the recent years there have been a number of studies that applied
+   deep learning algorithms to neuroimaging data. Pipelines used in those
+   studies mostly require multiple processing steps for feature extraction,
+   although modern advancements in deep learning for image classification
+   can provide a powerful framework for automatic feature generation and
+   more straightforward analysis. In this paper, we show how similar
+   performance can be achieved skipping these feature extraction steps with
+   the residual and plain 3D convolutional neural network architectures. We
+   demonstrate the performance of the proposed approach for classification
+   of Alzheimer's disease versus mild cognitive impairment and normal
+   controls on the Alzheimers Disease National Initiative (ADNI) dataset of
+   3D structural MRI brain scans.}},
+Publisher = {{IEEE}},
+Address = {{345 E 47TH ST, NEW YORK, NY 10017 USA}},
+Type = {{Proceedings Paper}},
+Language = {{English}},
+Affiliation = {{Korolev, S (Corresponding Author), Skolkovo Inst Sci \& Technol, Moscow, Moskovskaya Obl, Russia.
+   Korolev, S (Corresponding Author), Inst Informat Transmiss Problems, Moscow, Russia.
+   Korolev, Sergey; Safiullin, Amir; Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Moskovskaya Obl, Russia.
+   Korolev, Sergey; Safiullin, Amir; Belyaev, Mikhail; Dodonova, Yulia, Inst Informat Transmiss Problems, Moscow, Russia.}},
+ISBN = {{978-1-5090-1172-8}},
+Keywords = {{MRI; Alzheimer's Disease; Deep Learning; Convolutional Neural Network;
+   Residual Neural Network}},
+Research-Areas = {{Biochemistry \& Molecular Biology; Microscopy}},
+Web-of-Science-Categories  = {{Biochemical Research Methods; Microscopy}},
+Author-Email = {{s.korolev@skoltech.ru
+   aesafiullin@edu.hse.ru
+   m.belyaev@skoltech.ru
+   dodonova@iitp.ru}},
+ResearcherID-Numbers = {{Belyaev, Mikhail/M-4900-2016}},
+ORCID-Numbers = {{Belyaev, Mikhail/0000-0001-9906-6453}},
+Number-of-Cited-References = {{13}},
+Times-Cited = {{64}},
+Usage-Count-Last-180-days = {{1}},
+Usage-Count-Since-2013 = {{12}},
+Doc-Delivery-Number = {{BI7JM}},
+Unique-ID = {{WOS:000414283200194}},
+OA = {{Green Submitted}},
+DA = {{2021-10-27}},
+}
+
+@inproceedings{ WOS:000414283200105,
+Author = {Petrov, Dmitry and Gutman, Boris and Ivanov, Alexander and Faskowitz,
+   Joshua and Jahanshad, Neda and Belyaev, Mikhail and Thompson, Paul},
+Book-Group-Author = {{IEEE}},
+Title = {{STRUCTURAL CONNECTOME VALIDATION USING PAIRWISE CLASSIFICATION}},
+Booktitle = {{2017 IEEE 14TH INTERNATIONAL SYMPOSIUM ON BIOMEDICAL IMAGING (ISBI 2017)}},
+Year = {{2017}},
+Pages = {{451-455}},
+Note = {{IEEE 14th International Symposium on Biomedical Imaging (ISBI) - From
+   Nano to Macro, Melbourne, AUSTRALIA, APR 18-21, 2017}},
+Organization = {{IEEE; EMB; IEEE Signal Proc Soc}},
+Abstract = {{In this work, we study the extent to which structural connectomes and
+   topological derivative measures are unique to individual changes within
+   human brains. To do so, we classify structural connectome pairs from two
+   large longitudinal datasets as either belonging to the same individual
+   or not. Our data is comprised of 227 individuals from the Alzheimers
+   Disease Neuroimaging Initiative (ADNI) and 226 from the Parkinson's
+   Progression Markers Initiative (PPMI). We achieve 0.99 area under the
+   ROC curve score for features which represent either weights or network
+   structure of the connectomes (node degrees, PageRank and local
+   efficiency). Our approach may be useful for eliminating noisy features
+   as a preprocessing step in brain aging studies and early diagnosis
+   classification problems.}},
+Publisher = {{IEEE}},
+Address = {{345 E 47TH ST, NEW YORK, NY 10017 USA}},
+Type = {{Proceedings Paper}},
+Language = {{English}},
+Affiliation = {{Petrov, D (Corresponding Author), Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Petrov, D (Corresponding Author), Univ Southern Calif, Imaging Genet Ctr, Los Angeles, CA 90089 USA.
+   Petrov, Dmitry; Ivanov, Alexander; Belyaev, Mikhail, Kharkevich Inst Informat Transmiss Problems, Moscow, Russia.
+   Petrov, Dmitry; Gutman, Boris; Faskowitz, Joshua; Jahanshad, Neda; Thompson, Paul, Univ Southern Calif, Imaging Genet Ctr, Los Angeles, CA 90089 USA.
+   Belyaev, Mikhail, Skolkovo Inst Sci \& Technol, Moscow, Russia.}},
+ISBN = {{978-1-5090-1172-8}},
+Keywords = {{machine learning; DWI; structural connectomes}},
+Keywords-Plus = {{DIFFUSION MRI DATA; CONNECTIVITY}},
+Research-Areas = {{Biochemistry \& Molecular Biology; Microscopy}},
+Web-of-Science-Categories  = {{Biochemical Research Methods; Microscopy}},
+Author-Email = {{dmitry.petrov@gmail.com}},
+ResearcherID-Numbers = {{Faskowitz, Joshua/K-1330-2019
+   Belyaev, Mikhail/M-4900-2016}},
+ORCID-Numbers = {{Faskowitz, Joshua/0000-0003-1814-7206
+   Belyaev, Mikhail/0000-0001-9906-6453}},
+Funding-Acknowledgement = {{Russian Science FoundationRussian Science Foundation (RSF)
+   {[}14-50-00150]}},
+Funding-Text = {{The results of sections 2 and 3 are based on the scientific research
+   conducted at IITP RAS and supported by the Russian Science Foundation
+   (project 14-50-00150).}},
+Number-of-Cited-References = {{20}},
+Times-Cited = {{0}},
+Usage-Count-Last-180-days = {{0}},
+Usage-Count-Since-2013 = {{2}},
+Doc-Delivery-Number = {{BI7JM}},
+Unique-ID = {{WOS:000414283200105}},
+OA = {{Green Submitted}},
+DA = {{2021-10-27}},
+}
