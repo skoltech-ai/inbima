@@ -7,6 +7,7 @@ from docx.enum.table import WD_ALIGN_VERTICAL
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Inches
 from docx.shared import Mm, Cm, Pt
+import matplotlib.pyplot as plt
 import openpyxl
 import os
 from Levenshtein import distance
@@ -35,8 +36,11 @@ class InBiMa():
         }
         self.log('Excel file is parsed', 'res')
 
-        self.export_word_cv()
-        self.export_grant_papers()
+        #for uid in self.team.keys():
+        #    self.task['authors'] = [uid]
+        #    self.export_word_cv()
+        #self.export_grant_papers()
+        self.export_stat()
 
     def compose_paper_nums(self, paper, end='.'):
         volume = paper.get('volume')
@@ -330,7 +334,7 @@ class InBiMa():
         file_name = person['id'][1:] + '.jpg'
         file_path = self.folder + '/' + file_name
 
-        url = person['photo']
+        url = person.get('photo')
         if not url:
             return
 
@@ -415,6 +419,27 @@ class InBiMa():
         fpath = self.get_fpath(fname)
         self.docx_save(document, fpath)
         self.log(f'Document "{fpath}" is saved', 'res')
+
+    def export_stat(self):
+
+        stats = {}
+        for uid in self.team.keys():
+            if self.team[uid].get('active') != 'Yes':
+                continue
+            if self.team[uid].get('lead') != 'Yes':
+                continue
+            stats[uid] = self.get_papers_stat(uid, YEARS)
+
+        for uid, stat in stats.items():
+            x = YEARS
+            y = [stat[y]['total'] for y in YEARS]
+            plt.plot(x, y, marker='o', label=uid)
+
+        plt.legend(loc='best')
+
+        fpath = self.get_fpath('plot.png')
+        plt.savefig(fpath)
+        self.log(f'Figure "{fpath}" is saved', 'res')
 
     def get_journal(self, title=None, issn=None, dist_max=0, dist_max_wrn=1):
         if not issn and (not title or len(title) < 2):
