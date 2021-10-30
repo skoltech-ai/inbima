@@ -25,14 +25,14 @@ This is a draft version of a software product that demonstrates the idea and bas
 6. While the script work the [excel database](https://docs.google.com/spreadsheets/d/1jz76t2bRMzlNqL315SUf1WKr45lWu-c_/edit?usp=sharing&ouid=102021586566196668105&rtpof=true&sd=true) will be downloaded from Google Drive into temporary folder `export_DATETIME`. All generated reports will be also saved into this folder.
 7. The folder `export_DATETIME` will contain automatically generated reports using the default settings of the `inbima`.
     > In the current draft version of the program, only a bibliographic report for one member of the team is generated, as well as a report for articles within one grant. In the future, the type of the generated report can be specified by setting the appropriate flags in the excel file on the `INBIMA` sheet.
-8. To customize filters and other program settings, open the excel database file `cait.xlsx` from the same folder `export_DATETIME` and modify the `INBIMA` list in the file.
+8. [TODO (reading options from excel file is not supported yet)] To customize filters and other program settings, open the excel database file `cait.xlsx` from the same folder `export_DATETIME` and modify the `INBIMA` list in the file.
     > At the moment this is not relevant, since flags from excel file are not used in the current version of the code.
 9. Re-run the script by adding the flag `--last` (or `-l`)
     ```bash
     python inbima.py -l
     ```
     > When launched with this flag, the same folder `export_DATETIME` will be used (the folder with the maximum date value will be selected). When the script is running, the data and settings specified in the database `cait.xlsx` from this folder will be used. Note that all reports from the previous run will be removed from the folder! In order to avoid deleting previously generated reports, you can create a new folder `export_DATETIME` (with the highest `DATETIME` value) and copy the excel database `cait.xlsx` into it.
-10. The folder `export_DATETIME` will contain automatically generated reports using the customized settings of the `inbima`.
+10. [TODO (reading options from excel file is not supported yet)] The folder `export_DATETIME` will contain automatically generated reports using the customized settings of the `inbima`.
     > At the moment this is not relevant, since flags from excel file are not used in the current version of the code.
 
 

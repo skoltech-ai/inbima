@@ -1,4 +1,5 @@
 docx
+matplotlib
 openpyxl
 pybtex
 python-docx
