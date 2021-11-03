@@ -1,7 +1,7 @@
 import sys
 
 
-def load_table(sh, max_count=10000):
+def load_sheet(sh, max_count=10000):
     i = 1
     fields = []
     for j in range(1, max_count):
