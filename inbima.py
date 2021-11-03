@@ -1,37 +1,38 @@
-import csv
 import matplotlib.pyplot as plt
 import openpyxl
-from Levenshtein import distance
 import sys
 
 
 from fs import FS
-from utils import load_table
+from journals import Journals
+from utils import load_sheet
 from utils import log
 from word import Word
 
 
-JOURNALS_REF_SJR_FILE_PATH = './journals/scimagojr 2020.csv'
 YEARS = [2017, 2018, 2019, 2020, 2021]
 
 
 class InBiMa():
-    def __init__(self, fs):
-        self.fs = fs
+    def __init__(self, is_new_folder=False):
+        self.fs = FS(is_new_folder)
+        if is_new_folder: return
 
         self.wb = openpyxl.load_workbook(self.fs.get_path('cait.xlsx'))
         log('Excel file is opened', 'res')
 
-        self.team = load_table(self.wb['team'])
-        self.grants = load_table(self.wb['grants'])
-        self.papers = load_table(self.wb['papers'])
-        self.journals = load_table(self.wb['journals'])
-        self.journals_ref = self.load_journals_ref()
+        self.team = load_sheet(self.wb['team'])
+        self.grants = load_sheet(self.wb['grants'])
+        self.papers = load_sheet(self.wb['papers'])
+        self.journals = Journals(load_sheet(self.wb['journals']))
+        # self.journals_ref = self.load_journals_ref()
         self.task = {
             'authors': ['#cichocki'],
             'grants': ['#megagrant1'],
         }
         log('Excel file is parsed', 'res')
+
+        # log('Journal info is loaded', 'res')
 
         for uid in self.team.keys():
             self.task['authors'] = [uid]
@@ -118,26 +119,6 @@ class InBiMa():
         plt.savefig(fpath)
         log(f'Figure "{fpath}" is saved', 'res')
 
-    def get_journal(self, title=None, issn=None, dist_max=0, dist_max_wrn=1):
-        if not issn and (not title or len(title) < 2):
-            return
-
-        for title_real, item in self.journals_ref.items():
-            t = title_real.lower()
-            if issn and issn == item['issn']:
-                if title and distance(title.lower(), t) > dist_max:
-                    text = 'Journal found by ISSN but titles are different: '
-                    text += f'"{title}" is replaced by "{title_real}"'
-                    log(text, 'wrn')
-                return item
-            dist = distance(title.lower(), t)
-            if dist > dist_max:
-                continue
-            if dist >= dist_max_wrn:
-                text = f'Journal "{title}" is replaced by "{title_real}"'
-                log(text, 'wrn')
-            return item
-
     def get_papers(self, author=None, year=None, q=None, grant=None):
         res = {}
 
@@ -152,7 +133,7 @@ class InBiMa():
                 continue
 
             if q is not None:
-                journal = self.journals[paper['journal']]
+                journal = self.journals.data[paper['journal']]
                 q1 = journal.get('sjr_q1', '')
                 q2 = journal.get('sjr_q2', '')
                 if q == 1 and len(q1) < 2:
@@ -163,7 +144,7 @@ class InBiMa():
                     continue
 
             res[title] = paper
-            res[title]['journal_object'] = self.journals[paper['journal']]
+            res[title]['journal_object'] = self.journals.data[paper['journal']]
 
         return res
 
@@ -185,63 +166,16 @@ class InBiMa():
         }
         return res
 
-    def load_journals_ref(self):
-        res = {}
-
-        def parse_issn(issn):
-            if not issn or len(issn) < 8:
-                return ''
-            return issn[-8:-4] + '-' + issn[-4:]
-
-        def parse_quartiles(data):
-            res = {}
-            for item in data.split('; '):
-                name = item
-                quartile = ''
-                if item.endswith('(Q1)') or item.endswith('(Q2)') or item.endswith('(Q3)') or item.endswith('(Q4)'):
-                    name = item[:-5]
-                    quartile = item[-3:-1]
-                res[name] = quartile
-            return res
-
-        def parse_quartiles_q(quartiles, kind='Q1'):
-            res = []
-            for name, item in quartiles.items():
-                if kind == 'Q0' and not item or kind == item:
-                    res.append(name)
-            return ', '.join(res)
-
-        with open(JOURNALS_REF_SJR_FILE_PATH, newline='') as f:
-            for i, row in enumerate(csv.reader(f, delimiter=';')):
-                if i==0: continue
-                title = row[2]
-                quartiles = parse_quartiles(row[19])
-                res[title] = {
-                    'title': title,
-                    'type': row[3],
-                    'issn': parse_issn(row[4]),
-                    'country': row[15],
-                    'publisher': row[17],
-                    'sjr_rank': row[5],
-                    'sjr_best_quartile': row[6],
-                    'sjr_impact': row[7],
-                    'sjr_quartiles': quartiles,
-                    'sjr_q1': parse_quartiles_q(quartiles, 'Q1'),
-                    'sjr_q2': parse_quartiles_q(quartiles, 'Q2'),
-                    'sjr_q3': parse_quartiles_q(quartiles, 'Q3'),
-                    'sjr_q4': parse_quartiles_q(quartiles, 'Q4'),
-                    'sjr_q0': parse_quartiles_q(quartiles, 'Q0'),
-                }
-
-        return res
-
 
 if __name__ == '__main__':
     args = sys.argv[1:]
-    is_new_folder = '-f' in args or '--folder' in args
-
-    if is_new_folder:
-        fs = FS(is_new=True)
+    if len(args) == 0:
+        ibm = InBiMa()
+    elif len(args) == 1 and args[0] == '-f':
+        ibm = InBiMa(is_new_folder=True)
+    elif len(args) == 2 and args[0] == '-j':
+        journals = Journals()
+        journals.load_ref()
+        journals.log_ref(title=args[1])
     else:
-        fs = FS()
-        InBiMa(fs)
+        raise ValueError('Invalid arguments for script')
