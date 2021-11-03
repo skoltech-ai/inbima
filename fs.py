@@ -11,11 +11,11 @@ PHOTO_LOGO_URL = 'https://drive.google.com/file/d/1hApCr3FnpZedkaJnQkRA4GRoeKY-H
 
 
 class FS():
-    def __init__(self, is_new=False):
+    def __init__(self, is_new_folder=False):
         if not os.path.isdir(EXPORT_FOLDER):
             os.mkdir(EXPORT_FOLDER)
             log(f'The folder "{EXPORT_FOLDER}" is created', 'res')
-        if is_new:
+        if is_new_folder:
             dt = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
             self.folder = os.path.join(EXPORT_FOLDER, 'export_' + dt)
             os.mkdir(self.folder)
